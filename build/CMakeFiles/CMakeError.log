@@ -1,0 +1,112 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/pose/build/CMakeFiles/CMakeScratch/TryCompile-h5U3Er
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3a9a8/fast && /usr/bin/make  -f CMakeFiles/cmTC_3a9a8.dir/build.make CMakeFiles/cmTC_3a9a8.dir/build
+make[1]: Entering directory '/home/pose/build/CMakeFiles/CMakeScratch/TryCompile-h5U3Er'
+Building CXX object CMakeFiles/cmTC_3a9a8.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_3a9a8.dir/src.cxx.o -c /home/pose/build/CMakeFiles/CMakeScratch/TryCompile-h5U3Er/src.cxx
+Linking CXX executable cmTC_3a9a8
+/root/miniconda3/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a9a8.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_3a9a8.dir/src.cxx.o -o cmTC_3a9a8 
+/usr/bin/ld: CMakeFiles/cmTC_3a9a8.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.cxx:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3a9a8.dir/build.make:99: cmTC_3a9a8] Error 1
+make[1]: Leaving directory '/home/pose/build/CMakeFiles/CMakeScratch/TryCompile-h5U3Er'
+make: *** [Makefile:127: cmTC_3a9a8/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/pose/build/CMakeFiles/CMakeScratch/TryCompile-nFU2Cs
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4461d/fast && /usr/bin/make  -f CMakeFiles/cmTC_4461d.dir/build.make CMakeFiles/cmTC_4461d.dir/build
+make[1]: Entering directory '/home/pose/build/CMakeFiles/CMakeScratch/TryCompile-nFU2Cs'
+Building CXX object CMakeFiles/cmTC_4461d.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_4461d.dir/CheckFunctionExists.cxx.o -c /home/pose/build/CMakeFiles/CMakeScratch/TryCompile-nFU2Cs/CheckFunctionExists.cxx
+Linking CXX executable cmTC_4461d
+/root/miniconda3/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4461d.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_4461d.dir/CheckFunctionExists.cxx.o -o cmTC_4461d  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_4461d.dir/build.make:99: cmTC_4461d] Error 1
+make[1]: Leaving directory '/home/pose/build/CMakeFiles/CMakeScratch/TryCompile-nFU2Cs'
+make: *** [Makefile:127: cmTC_4461d/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/pose/build/CMakeFiles/CMakeScratch/TryCompile-XbENsp
+
+Run Build Command(s):/root/miniconda3/bin/ninja cmTC_2fbb9 && [1/2] Building CXX object CMakeFiles/cmTC_2fbb9.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_2fbb9
+FAILED: cmTC_2fbb9 
+: && /usr/bin/c++  -rdynamic CMakeFiles/cmTC_2fbb9.dir/src.cxx.o -o cmTC_2fbb9   && :
+/usr/bin/ld: CMakeFiles/cmTC_2fbb9.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.cxx:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/pose/build/CMakeFiles/CMakeScratch/TryCompile-Klw3aq
+
+Run Build Command(s):/root/miniconda3/bin/ninja cmTC_d0d30 && [1/2] Building CXX object CMakeFiles/cmTC_d0d30.dir/CheckFunctionExists.cxx.o
+[2/2] Linking CXX executable cmTC_d0d30
+FAILED: cmTC_d0d30 
+: && /usr/bin/c++ -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_d0d30.dir/CheckFunctionExists.cxx.o -o cmTC_d0d30  -lpthreads && :
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+

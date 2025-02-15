@@ -1,0 +1,4 @@
+# ninja log v5
+3	2311	1739591041087758218	CMakeFiles/main.dir/main.cpp.o	c411f3cf492f571c
+5	2774	1739591290452768569	CMakeFiles/main.dir/src/yolov8-pose.cpp.o	d84a069a7870c8cc
+2775	2950	1739591290628777742	main	393b8715d0b2b3b0

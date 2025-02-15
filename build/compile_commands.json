@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/pose/build",
+  "command": "/usr/bin/c++ -DDEBUG -I/usr/local/cuda/include -I/opt/TensorRT-8.5.2.2/include -I/opt/TensorRT-8.5.2.2/samples/common -I/home/pose/include -isystem /usr/local/include/opencv4 -g -g -o CMakeFiles/main.dir/main.cpp.o -c /home/pose/main.cpp",
+  "file": "/home/pose/main.cpp"
+},
+{
+  "directory": "/home/pose/build",
+  "command": "/usr/bin/c++ -DDEBUG -I/usr/local/cuda/include -I/opt/TensorRT-8.5.2.2/include -I/opt/TensorRT-8.5.2.2/samples/common -I/home/pose/include -isystem /usr/local/include/opencv4 -g -g -o CMakeFiles/main.dir/src/yolov8-pose.cpp.o -c /home/pose/src/yolov8-pose.cpp",
+  "file": "/home/pose/src/yolov8-pose.cpp"
+}
+]

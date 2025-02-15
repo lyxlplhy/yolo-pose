@@ -1,0 +1,3 @@
+/home/pose/build/CMakeFiles/main.dir
+/home/pose/build/CMakeFiles/edit_cache.dir
+/home/pose/build/CMakeFiles/rebuild_cache.dir
