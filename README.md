@@ -40,7 +40,9 @@ MS_MEMORY_POOL_RECYCLE=1
 
 ## 二、配置文件及权重转换
 
-### 权重下载与转换
+### 基础配置
+
+#### 模型权重转换
 创建文件夹
 ```
 cd mindspore 
@@ -72,9 +74,17 @@ torch_ckpt_path: huggingface权重保存目录下的任意权重bin文件,根据
 mindspore_ckpt_path: 权重保存文件名，可以指定自定义保存路径
 
 ```
+#### 训练数据转换
 
+以Wikitext2数据集为例，[下载](https://hb-public.obs.cn-north-300.hblfrgzn.com:443/datasets/wikitext-2-v1.zip)，具体[参考](https://gitee.com/mindspore/mindformers/blob/dev/docs/model_cards/llama.md#%E6%95%B0%E6%8D%AE%E9%9B%86%E5%87%86%E5%A4%87-%E9%A2%84%E8%AE%AD%E7%BB%83)
 
-
-
+```
+python llama_preprocess.py \
+--dataset_type wiki \
+--input_glob  /home/ma-user/work/mindformers/datasets/wikitext-2/wiki.train.tokens \
+--model_file /home/ma-user/work/mindformers/ckpt/llama2/tokenizer.model \
+--seq_length 4096 \
+--output_file /home/ma-user/work/mindformers/mr_datasets/wiki4096.mindrecord
+```
 
 
