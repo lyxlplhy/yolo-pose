@@ -1,9 +1,12 @@
 # 大模型关键参数识别mindspore实现
 
 ## 一、使用华为modelart平台
-###设置启动方式和代码目录
+
+### 设置启动方式和代码目录
 
 启动方式中选择预置框架，Ascend-Powered-Engine mindspore_2.3.0-cann_8.0.rc1-py_3.9-euler_2.10.7-aarch64-snt9b，代码目录选择obs目录中代码目录，obs使用指南参考[obs指南](https://support.huaweicloud.com/intl/zh-cn/browsertg-obs/obs-browsertg-zh-pdf.pdf)，启动文件选择 /mindformers-r1.0/run_mindformer.py
+![image](https://github.com/user-attachments/assets/d8131ceb-eade-4461-bb61-329b01abb791)
+
 
 ## 四、快速使用
 
