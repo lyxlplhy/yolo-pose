@@ -1,5 +1,6 @@
 # 大模型关键参数识别mindspore实现
 
+
 ## 一、使用华为modelart平台
 
 ### 设置启动方式和代码目录
@@ -36,6 +37,22 @@ MS_MEMORY_POOL_RECYCLE=1
 实例规格：Ascend: 8*Ascend-snt9b1(32GB)|arm:192核 1536GB
 
 ![image](https://github.com/user-attachments/assets/42ed0635-4953-4b7f-afd3-afeb098f9f34)
+
+## 二、配置文件及权重转换
+
+### 权重下载与转换
+cd mindspore 
+
+mkdir ckpt
+
+cd ckpt
+
+在notebook的Terminal命令行输入 python，进入python交互界面，然后输入如下语句：
+import moxing as mox
+mox.file.copy_parallel("obs://hb-public/LLM/llama2/llama2-ckpt.tar.gz", "/home/ma-user/work/mindformers/ckpt/llama2-ckpt.tar.gz")
+退出交互界面，将文件解压
+tar -zxvf llama2-ckpt.tar.gz
+
 
 
 
