@@ -52,6 +52,8 @@ import moxing as mox
 mox.file.copy_parallel("obs://hb-public/LLM/llama2/llama2-ckpt.tar.gz", "/home/ma-user/work/mindformers/ckpt/llama2-ckpt.tar.gz")
 退出交互界面，将文件解压
 tar -zxvf llama2-ckpt.tar.gz
+转化为mindspore格式权重
+
 
 
 
