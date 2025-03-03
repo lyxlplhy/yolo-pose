@@ -103,6 +103,25 @@ data_dir：/home/ma-user/work/mindformers/mr_datasets/wiki4096.mindrecord
 
 load_checkpoint: 'mindformers-r1.0/data/llama2_7b.ckpt'
 
+## 三、攻击方式
+
+攻击方式设置，两种模式设置，在llama_mindspore/mindformer/trainer/base_trainer 759行，设置True或者False，实现全模型攻击和针对攻击单层恢复
+
+防御方式设置，设置防御多少层级：llama_mindspore/mindformer/trainer/base_trainer 754行，设置模型被保护的层级的名字，具体名字根据模型情况而定
+
+```
+parameters={param.name: param.data for param in model.train_network.network.get_parameters()}
+        for name in parameters.keys():
+            print(name)
+        logger.info("delete")
+        for param in model.train_network.network.get_parameters():
+            if 'layers.1' in param.name or 'layers.2' in param.name:
+                logger.info(param.name)
+                logger.info("is initialization")
+                param.set_data(initializer(Normal(), param.data.shape, param.data.dtype))
+            else:
+                param.trainable = False
+```
 
 
 
