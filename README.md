@@ -41,7 +41,7 @@ MS_MEMORY_POOL_RECYCLE=1
 ## 二、配置文件及权重转换
 
 ### 权重下载与转换
-
+创建文件夹
 ```
 cd mindspore 
 
@@ -51,25 +51,27 @@ cd ckpt
 ```
 
 在notebook的Terminal命令行输入 python，进入python交互界面，然后输入如下语句：
-
+```
 import moxing as mox
-
 mox.file.copy_parallel("obs://hb-public/LLM/llama2/llama2-ckpt.tar.gz", "/home/ma-user/work/mindformers/ckpt/llama2-ckpt.tar.gz")
+```
 
 退出交互界面，将文件解压：
-
+```
 tar -zxvf llama2-ckpt.tar.gz
-
+```
 转化为mindspore格式权重：
+```
 python mindformers/models/llama/convert_weight.py \
 --torch_ckpt_path TORCH_CKPT_PATH \
 --mindspore_ckpt_path {path}/MS_CKPT_NAME
-
+```
+```
 # 参数说明
 torch_ckpt_path: huggingface权重保存目录下的任意权重bin文件,根据该文件路径读取目录下全部权重
 mindspore_ckpt_path: 权重保存文件名，可以指定自定义保存路径
 
-
+```
 
 
 
