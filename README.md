@@ -41,11 +41,14 @@ MS_MEMORY_POOL_RECYCLE=1
 ## 二、配置文件及权重转换
 
 ### 权重下载与转换
+
+```
 cd mindspore 
 
 mkdir ckpt
 
 cd ckpt
+```
 
 在notebook的Terminal命令行输入 python，进入python交互界面，然后输入如下语句：
 
