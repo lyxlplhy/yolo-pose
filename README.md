@@ -42,7 +42,7 @@ MS_MEMORY_POOL_RECYCLE=1
 
 ### 基础配置
 
-#### 模型权重转换
+#### 模型权重
 创建文件夹
 ```
 cd mindspore 
@@ -61,6 +61,8 @@ mox.file.copy_parallel("obs://hb-public/LLM/llama2/llama2-ckpt.tar.gz", "/home/m
 退出交互界面，将文件解压：
 ```
 tar -zxvf llama2-ckpt.tar.gz
+
+注意：如果下载权重为huggingface权重，需要转化为ckpt权重
 ```
 转化为mindspore格式权重：
 ```
@@ -86,5 +88,16 @@ python llama_preprocess.py \
 --seq_length 4096 \
 --output_file /home/ma-user/work/mindformers/mr_datasets/wiki4096.mindrecord
 ```
+
+#### 配置文件
+data_dir为训练数据和验证数据路径，load_checkpoint为模型权重路径
+
+data_dir：/home/ma-user/work/mindformers/mr_datasets/wiki4096.mindrecord
+
+load_checkpoint: 'mindformers-r1.0/data/llama2_7b.ckpt'
+
+
+
+
 
 
