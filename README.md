@@ -107,7 +107,7 @@ load_checkpoint: 'mindformers-r1.0/data/llama2_7b.ckpt'
 
 攻击方式设置，两种模式设置，在llama_mindspore/mindformer/trainer/base_trainer 759行，设置True或者False，实现全模型攻击和针对攻击单层恢复
 
-防御方式设置，设置防御多少层级：llama_mindspore/mindformer/trainer/base_trainer 754行，设置模型被保护的层级的名字，具体名字根据模型情况而定
+防御方式设置，设置防御多少层级：llama_mindspore/mindformer/trainer/base_trainer 754行，设置模型被保护的层级的名字，具体根据模型层数情况而定
 
 ```
 parameters={param.name: param.data for param in model.train_network.network.get_parameters()}
