@@ -38,6 +38,13 @@ MS_MEMORY_POOL_RECYCLE=1
 
 ![image](https://github.com/user-attachments/assets/42ed0635-4953-4b7f-afd3-afeb098f9f34)
 
+### 启动微调
+
+点击提交，输出文件训练日志为设置remote_save_url地址
+
+![image](https://github.com/user-attachments/assets/ee857f33-e641-4462-8bdf-b5c5322415ad)
+
+
 ## 二、配置文件及权重转换
 
 ### 基础配置
