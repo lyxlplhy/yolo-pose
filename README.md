@@ -1,4 +1,4 @@
-# yolo-pose onnx推理代码
+# yolo-pose tenorRT推理代码
 
 
 
